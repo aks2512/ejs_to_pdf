@@ -1,0 +1,1876 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia de Serviço</title>
+</head>
+<body>
+  <style>
+    html {
+      -webkit-print-color-adjust: exact;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-size: 10px;
+      margin: auto;
+      max-width: 1350px;
+    }
+    .page {
+      border: 1px solid black;
+      margin: 5px;
+      padding: 5px;
+    }
+    .title {
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+    .description {
+      font-size: 9px;
+    }
+    .section {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .section__title {
+      width: 100%;
+      background-color: #e9e8e8;
+      font-size: 12px;
+      padding: 0 5px;
+      padding-top: 10px;
+      padding-bottom: 5px;
+      margin-top: 10px;
+      margin-bottom: 5px;
+    }
+    .rows {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .justifyEnd {
+      justify-content: end;
+    }
+    .row {
+      display: flex;
+      gap: 5px;
+      flex-wrap: wrap;
+    }
+    .box {
+      border: 1px solid black;
+      padding: 5px;
+      min-width: 70px;
+      min-height: 70px;
+    }
+    .box--gray {
+      border: 1px solid black;
+      padding: 5px;
+      min-width: 70px;
+      min-height: 70px;
+      background-color: #bfbfbf;
+    }
+    .box--gray--auto {
+      border: 1px solid black;
+      padding: 5px;
+      min-height: 70px;
+      background-color: #bfbfbf;
+    }
+    .box__title {
+      font-size: 10px;
+      margin: 10px 0;
+    }
+    .box__content {
+      display: flex;
+      align-items: center;
+      height: calc(100% - 31px);
+    }
+    .codeRow {
+      display: flex;
+      align-items: end;
+      gap: 1px;
+    }
+    .codeBoxSmall .codeBox {
+      width: 13.5px!important;
+      height: 13.5px!important;
+    }
+    .codeBoxMedium .codeBox {
+      width: 18.9px!important;
+      height: 16px!important;
+    }
+    table.codeBoxSmall td + td > div,
+    table.codeBoxSmall td + td > span  {
+      margin-left: 0px;
+    }
+    table.codeBoxSmall th + th  {
+      padding-left: 0px;
+    }
+    .codeBox {
+      display: block;
+      width: 20px;
+      height: 16px;
+      border: 1px solid black;
+      border-top: none;
+      text-align: center;
+    }
+    .divider--bar {
+      &::before {
+        content: '/';
+        margin: 0 2px;
+      }
+    }
+    .divider--dots {
+      &::before {
+        content: ':';
+        margin: 0 2px;
+      }
+    }
+    .divider--space {
+      &::before {
+        content: '';
+        margin: 0 10px;
+      }
+    }
+    .divider--line {
+      &::before {
+        content: '-';
+        margin: 0 2px;
+      }
+    }
+    .divider--comma {
+      &::before {
+        content: ',';
+        margin: 0 2px;
+      }
+    }
+    .itemsRow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .itemsFlex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .underline {
+      display: block;
+      width: 100%;
+      /* height: 14px; */
+      /* border-bottom: 1px solid black; */
+      text-decoration: underline;
+    }
+
+    table {
+      width: 100%;
+    }
+
+    th {
+      padding: 10px 5px;
+      text-align: start;
+    }
+
+    th + th {
+      white-space: nowrap;
+      padding-left: 20px;
+    }
+
+    td + td > div, td + td > span {
+      margin-left: 20px;
+    }
+    .signature {
+      width: 70px;
+      height: 70px;
+    }
+    .breakSpace {
+      width: 100%;
+      height: 220px;
+    }
+  </style>
+  <div class="page">
+    <header>
+      <h1 class="title">GUIA DE SERVIÇO PROFISSIONAL / SERVIÇO AUXILIAR DE DIAGNÓSTICO E TERAPIA - SP/SADT</h1>
+    </header>
+
+    <!-- Section Inicial -->
+    <section class="section">
+      <div class="row">
+        <div class="box">
+          <p class="box__title">1 - Registro ANS</p>
+          <div class="box__content">
+            <span><%= ans || ' ' %></span>
+          </div>
+        </div>
+        <div class="box--gray">
+          <p class="box__title">3 - Nº Guia Principal</p>
+          <div class="box__content">
+            <div class="codeRow">
+              <span class="codeBox"></span>
+              <span class="codeBox"></span>
+              <span class="codeBox"></span>
+              <span class="codeBox"></span>
+              <span class="codeBox"></span>
+              <span class="codeBox"></span>
+              <span class="codeBox"></span>
+              <span class="codeBox"></span>
+              <span class="codeBox"></span>
+              <span class="codeBox"></span>
+              <span class="codeBox"></span>
+              <span class="codeBox"></span>
+              <span class="codeBox"></span>
+              <span class="codeBox"></span>
+              <span class="codeBox"></span>
+              <span class="codeBox"></span>
+              <span class="codeBox"></span>
+              <span class="codeBox"></span>
+            </div>
+          </div>
+        </div>
+        <div class="box--gray">
+          <p class="box__title">4 - Data da Autorização</p>
+          <div class="box__content">
+            <div class="codeRow">
+              <span class="codeBox"></span>
+              <span class="codeBox"></span>
+              <div class="divider--bar"></div>
+              <span class="codeBox"></span>
+              <span class="codeBox"></span>
+              <div class="divider--bar"></div>
+              <span class="codeBox"></span>
+              <span class="codeBox"></span>
+            </div>
+          </div>
+        </div>
+        <div class="box--gray">
+          <p class="box__title">5 - Senha </p>
+        </div>
+        <div class="box--gray">
+          <p class="box__title">6 - Data Validade da Senha</p>
+          <div class="box__content">
+            <div class="codeRow">
+              <span class="codeBox"></span>
+              <span class="codeBox"></span>
+              <div class="divider--bar"></div>
+              <span class="codeBox"></span>
+              <span class="codeBox"></span>
+              <div class="divider--bar"></div>
+              <span class="codeBox"></span>
+              <span class="codeBox"></span>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <p class="box__title">7 - Data de Emissão da Guia</p>
+          <div class="box__content">
+            <div class="codeRow">
+              <span class="codeBox"><%= todayDate.split('')[0] %></span>
+              <span class="codeBox"><%= todayDate.split('')[1] %></span>
+              <div class="divider--bar"></div>
+              <span class="codeBox"><%= todayDate.split('')[2] %></span>
+              <span class="codeBox"><%= todayDate.split('')[3] %></span>
+              <div class="divider--bar"></div>
+              <span class="codeBox"><%= todayDate.split('')[todayDate.split('').length - 2] %></span>
+              <span class="codeBox"><%= todayDate.split('')[todayDate.split('').length - 1] %></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dados do Beneficiário -->
+    <section>
+      <h2 class="section__title">Dados do Beneficiário</h2>
+      <div class="row">
+        <div class="box">
+          <p class="box__title">8 - Número da Carteira </p>
+          <div class="box__content">
+            <div class="codeRow">
+              <span class="codeBox"><%= number_wallet.split('')[0] || '' %></span>
+              <span class="codeBox"><%= number_wallet.split('')[1] || '' %></span>
+              <span class="codeBox"><%= number_wallet.split('')[2] || '' %></span>
+              <span class="codeBox"><%= number_wallet.split('')[3] || '' %></span>
+              <span class="codeBox"><%= number_wallet.split('')[4] || '' %></span>
+              <span class="codeBox"><%= number_wallet.split('')[5] || '' %></span>
+              <span class="codeBox"><%= number_wallet.split('')[6] || '' %></span>
+              <span class="codeBox"><%= number_wallet.split('')[7] || '' %></span>
+              <span class="codeBox"><%= number_wallet.split('')[8] || '' %></span>
+              <span class="codeBox"><%= number_wallet.split('')[9] || '' %></span>
+              <span class="codeBox"><%= number_wallet.split('')[10] || '' %></span>
+              <span class="codeBox"><%= number_wallet.split('')[11] || '' %></span>
+              <span class="codeBox"><%= number_wallet.split('')[12] || '' %></span>
+              <span class="codeBox"><%= number_wallet.split('')[13] || '' %></span>
+              <span class="codeBox"><%= number_wallet.split('')[14] || '' %></span>
+              <span class="codeBox"><%= number_wallet.split('')[15] || '' %></span>
+              <span class="codeBox"><%= number_wallet.split('')[16] || '' %></span>
+              <span class="codeBox"><%= number_wallet.split('')[17] || '' %></span>
+              <span class="codeBox"><%= number_wallet.split('')[18] || '' %></span>
+              <span class="codeBox"><%= number_wallet.split('')[19] || '' %></span>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <p class="box__title">9 - Plano</p>
+          <div class="box__content">
+            <span><%= insurance || ' ' %></span>
+          </div>
+        </div>
+        <div class="box--gray">
+          <p class="box__title">10 - Validade da Carteira</p>
+          <div class="box__content">
+            <div class="codeRow">
+              <span class="codeBox"></span>
+              <span class="codeBox"></span>
+              <div class="divider--bar"></div>
+              <span class="codeBox"></span>
+              <span class="codeBox"></span>
+              <div class="divider--bar"></div>
+              <span class="codeBox"></span>
+              <span class="codeBox"></span>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <p class="box__title">11 - Nome </p>
+          <div class="box__content">
+            <span><%= patient_name || ' ' %></span>
+          </div>
+        </div>
+        <div class="box--gray">
+          <p class="box__title">12 - Número do Cartão Nacional de Saúde</p>
+          <div class="box__content">
+            <div class="codeRow">
+              <span class="codeBox"><%= identity.split('')[0] || '' %></span>
+              <span class="codeBox"><%= identity.split('')[1] || '' %></span>
+              <span class="codeBox"><%= identity.split('')[2] || '' %></span>
+              <span class="codeBox"><%= identity.split('')[3] || '' %></span>
+              <span class="codeBox"><%= identity.split('')[4] || '' %></span>
+              <span class="codeBox"><%= identity.split('')[5] || '' %></span>
+              <span class="codeBox"><%= identity.split('')[6] || '' %></span>
+              <span class="codeBox"><%= identity.split('')[7] || '' %></span>
+              <span class="codeBox"><%= identity.split('')[8] || '' %></span>
+              <span class="codeBox"><%= identity.split('')[9] || '' %></span>
+              <span class="codeBox"><%= identity.split('')[10] || '' %></span>
+              <span class="codeBox"><%= identity.split('')[11] || '' %></span>
+              <span class="codeBox"><%= identity.split('')[12] || '' %></span>
+              <span class="codeBox"><%= identity.split('')[13] || '' %></span>
+              <span class="codeBox"><%= identity.split('')[14] || '' %></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dados do Contratado Solicitante -->
+    <section>
+      <h2 class="section__title">Dados do Contratado Solicitante</h2>
+      <div class="rows">
+        <div class="row">
+          <div class="box">
+            <p class="box__title">13 - Código na Operadora/CNPJ/CPF</p>
+            <div class="box__content">
+              <div class="codeRow">
+                <span class="codeBox"><%= cnpj.split('')[0] || '' %></span>
+                <span class="codeBox"><%= cnpj.split('')[1] || '' %></span>
+                <span class="codeBox"><%= cnpj.split('')[2] || '' %></span>
+                <span class="codeBox"><%= cnpj.split('')[3] || '' %></span>
+                <span class="codeBox"><%= cnpj.split('')[4] || '' %></span>
+                <span class="codeBox"><%= cnpj.split('')[5] || '' %></span>
+                <span class="codeBox"><%= cnpj.split('')[6] || '' %></span>
+                <span class="codeBox"><%= cnpj.split('')[7] || '' %></span>
+                <span class="codeBox"><%= cnpj.split('')[8] || '' %></span>
+                <span class="codeBox"><%= cnpj.split('')[9] || '' %></span>
+                <span class="codeBox"><%= cnpj.split('')[10] || '' %></span>
+                <span class="codeBox"><%= cnpj.split('')[11] || '' %></span>
+                <span class="codeBox"><%= cnpj.split('')[12] || '' %></span>
+                <span class="codeBox"><%= cnpj.split('')[13] || '' %></span>
+              </div>
+            </div>
+          </div>
+          <div class="box" style="min-width: 560px">
+            <p class="box__title">14 - Nome do Contratado </p>
+          </div>
+          <div class="box--gray">
+            <p class="box__title">15 - Código CNES</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="box--gray" style="min-width: 450px">
+            <p class="box__title">16 - Nome do Profissional Solicitante</p>
+            <div class="box__content">
+              <span><%= professional_name || ' ' %></span>
+            </div>
+          </div>
+          <div class="box" style="min-width: 190px">
+            <p class="box__title">17 - Conselho Profissional </p>
+            <div class="box__content">
+              <span><%= professional_advice || ' ' %></span>
+            </div>
+          </div>
+          <div class="box" style="min-width: 200px">
+            <p class="box__title">18 - Número no Conselho</p>
+            <div class="box__content">
+              <span><%= number_advice || ' ' %></span>
+            </div>
+          </div>
+          <div class="box" style="min-width: 100px">
+            <p class="box__title">19 - UF</p>
+            <div class="box__content">
+              <span><%= uf || ' ' %></span>
+            </div>
+          </div>
+          <div class="box--gray">
+            <p class="box__title">20 - Código CBOS</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Dados da Solicitação/Procedimentos e Exames Solicitados -->
+    <section>
+      <h2 class="section__title">Dados da Solicitação/Procedimentos e Exames Solicitados</h2>
+      <div class="rows">
+        <div class="row">
+          <div class="box--gray">
+            <p class="box__title">21 - Data/Hora da Solicitação</p>
+            <div class="box__content">
+              <div class="codeRow">
+                <span class="codeBox"></span>
+                <span class="codeBox"></span>
+                <div class="divider--bar"></div>
+                <span class="codeBox"></span>
+                <span class="codeBox"></span>
+                <div class="divider--bar"></div>
+                <span class="codeBox"></span>
+                <span class="codeBox"></span>
+                <div class="divider--space"></div>
+                <span class="codeBox"></span>
+                <span class="codeBox"></span>
+                <div class="divider--dots"></div>
+                <span class="codeBox"></span>
+                <span class="codeBox"></span>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <p class="box__title">22 - Caráter da Solicitação</p>
+            <div class="box__content">
+              <div class="itemsRow">
+                <span class="codeBox"><%= elective %></span>
+                <span>E-Eletiva U-Urgência/Emergência</span>
+              </div>
+            </div>
+          </div>
+          <div class="box--gray--auto">
+            <p class="box__title">23 - CID 10</p>
+            <div class="box__content">
+              <div class="codeRow">
+                <span class="codeBox"></span>
+                <span class="codeBox"></span>
+                <span class="codeBox"></span>
+                <span class="codeBox"></span>
+                <span class="codeBox"></span>
+              </div>
+            </div>
+          </div>
+          <div class="box--gray" style="min-width: 500px">
+            <p class="box__title">24 - Indicação Clínica (obrigatório se pequena cirurgia, terapia, consulta de referência e alto custo)
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="box" style="width: 100%;">
+            <table>
+              <thead>
+                <th>25 - Tabela</th>
+                <th> 26 - Código do Procedimento</th>
+                <th>27 - Descrição</th>
+                <th>28 - Qtde. Solict</th>
+                <th>29 - Qtde. Aut</th>
+              </thead>
+              <tbody>
+                <% for (var i = 0; i < procedures.length; i++) { %>
+                  <tr>
+                    <td>
+                      <div class="itemsRow">
+                        <span style="width: 15px;"><%= i + 1 %>-</span>
+                        <div class="codeRow">
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="codeRow">
+                        <span class="codeBox"><%= procedures[i].code[0] %></span>
+                        <span class="codeBox"><%= procedures[i].code[1] %></span>
+                        <span class="codeBox"><%= procedures[i].code[2] %></span>
+                        <span class="codeBox"><%= procedures[i].code[3] %></span>
+                        <span class="codeBox"><%= procedures[i].code[4] %></span>
+                        <span class="codeBox"><%= procedures[i].code[5] %></span>
+                        <span class="codeBox"><%= procedures[i].code[6] %></span>
+                        <span class="codeBox"><%= procedures[i].code[7] %></span>
+                        <span class="codeBox"><%= procedures[i].code[8] %></span>
+                        <span class="codeBox"><%= procedures[i].code[9] %></span>
+                      </div>
+                    </td>
+                    <td><span class="underline" style="min-width: 550px;max-width: 550px;"><%= procedures[i].description %></span></td>
+                    <td>
+                      <div class="codeRow">
+                        <span class="codeBox"><%= procedures_quantity[i].split('')[0] || '' %></span>
+                        <span class="codeBox"><%= procedures_quantity[i].split('')[1] || '' %></span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="codeRow">
+                        <span class="codeBox"></span>
+                        <span class="codeBox"></span>
+                      </div>
+                    </td>
+                  </tr>
+                <% } %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="row">
+          <div class="box">
+            <p class="box__title">30 - Código na Operadora/CNPJ/CPF </p>
+            <div class="box__content">
+              <div class="codeRow">
+                <span class="codeBox"></span>
+                <span class="codeBox"></span>
+                <span class="codeBox"></span>
+                <span class="codeBox"></span>
+                <span class="codeBox"></span>
+                <span class="codeBox"></span>
+                <span class="codeBox"></span>
+                <span class="codeBox"></span>
+                <span class="codeBox"></span>
+                <span class="codeBox"></span>
+                <span class="codeBox"></span>
+                <span class="codeBox"></span>
+                <span class="codeBox"></span>
+                <span class="codeBox"></span>
+              </div>
+            </div>
+          </div>
+          <div class="box" style="min-width: 120px">
+            <p class="box__title">31 - Nome do Contratado </p>
+          </div>
+          <div class="box--gray--auto">
+            <p class="box__title">32 - T.L. </p>
+          </div>
+          <div class="box--gray--auto">
+            <p class="box__title">33-34-35 - Logradouro - Número - Complemento</p>
+          </div>
+          <div class="box--gray--auto">
+            <p class="box__title">36 - Município </p>
+          </div>
+          <div class="box--gray--auto">
+            <p class="box__title">37 - UF</p>
+          </div>
+          <div class="box--gray--auto">
+            <p class="box__title"> 38 - Cód. IBGE </p>
+          </div>
+          <div class="box--gray--auto">
+            <p class="box__title">39 - CEP </p>
+          </div>
+          <div class="box--gray--auto">
+            <p class="box__title">40 - Código CNES</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="box--gray">
+            <p class="box__title">40ª - Código na Operadora/CPF do exec. complementar</p>
+            <div class="box__content">
+              <div class="codeRow">
+                <span class="codeBox"></span>
+                <span class="codeBox"></span>
+                <span class="codeBox"></span>
+                <span class="codeBox"></span>
+                <span class="codeBox"></span>
+                <span class="codeBox"></span>
+                <span class="codeBox"></span>
+                <span class="codeBox"></span>
+                <span class="codeBox"></span>
+                <span class="codeBox"></span>
+                <span class="codeBox"></span>
+                <span class="codeBox"></span>
+                <span class="codeBox"></span>
+                <span class="codeBox"></span>
+              </div>
+            </div>
+          </div>
+          <div class="box--gray" style="min-width: 200px">
+            <p class="box__title">41 - Nome do Profissional Executante/Complementar</p>
+          </div>
+          <div class="box--gray--auto">
+            <p class="box__title">42 - Conselho Profissional </p>
+          </div>
+          <div class="box--gray--auto">
+            <p class="box__title">43 - Número no Conselho </p>
+          </div>
+          <div class="box--gray--auto">
+            <p class="box__title">44 - UF </p>
+          </div>
+          <div class="box--gray--auto">
+            <p class="box__title">45 - Código CBOS </p>
+          </div>
+          <div class="box--gray--auto">
+            <p class="box__title">45ª - Grau de Participação</p>
+            <div class="box__content">
+              <div class="codeRow">
+                <span class="codeBox"></span>
+                <span class="codeBox"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dados do Atendimento -->
+    <section>
+      <h2 class="section__title">Dados do Atendimento</h2>
+        <div class="row">
+          <div class="box">
+            <p class="box__title">46 - Tipo de Atendimento</p>
+            <div class="box__content">
+              <div class="itemsRow">
+                <div class="codeRow">
+                  <span class="codeBox"></span>
+                  <span class="codeBox"></span>
+                </div>
+                <div class="rows">
+                  <span class="description">01- Remoção 02- Pequena Cirurgia 03- Terapias 04- Consulta 05- Exame 06- Atendimento Domiciliar</span>
+                  <span class="description">07- SADT Internado 08- Quimioterapia 09- Radioterapia 10- TRS-Terapia Renal Substitutiva</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="box--gray">
+            <p class="box__title">47 - Indicação de Acidente </p>
+            <div class="box__content">
+              <div class="itemsRow">
+                <div class="codeRow">
+                  <span class="codeBox"></span>
+                </div>
+                <div class="rows">
+                  <span class="description">0- Acidente ou doença relacionado ao trabalho 1- Trânsito 2- Outros</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <p class="box__title">48 - Tipo de Saída</p>
+            <div class="box__content">
+              <div class="itemsRow">
+                <div class="codeRow">
+                  <span class="codeBox"></span>
+                </div>
+                <div class="rows">
+                  <span class="description">1- Retorno 2-Retorno SADT 3- Referência 4- Internação 5- Alta 6- Óbito</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    
+    <!-- Consulta Referência -->
+    <section>
+      <h2 class="section__title">Consulta Referência</h2>
+        <div class="row">
+          <div class="box--gray">
+            <p class="box__title">49 - Tipo de Doença</p>
+            <div class="box__content">
+              <div class="itemsRow">
+                <div class="codeRow">
+                  <span class="codeBox"></span>
+                </div>
+                <div class="rows">
+                  <span>A- Aguda C-Crônica</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="box--gray">
+            <p class="box__title">50 - Tempo de Doença</p>
+            <div class="box__content">
+              <div class="itemsRow">
+                <div class="codeRow">
+                  <span class="codeBox"></span>
+                  <span class="codeBox"></span>
+                  <div class="divider--line"></div>
+                  <span class="codeBox"></span>
+                </div>
+                <div class="rows">
+                  <span>A- Anos M- Meses D- Dias</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    
+    <!-- Procedimentos e Exames realizados -->
+    <section>
+      <div class="breakSpace"></div>
+      <h2 class="section__title">Procedimentos e Exames realizados</h2>
+      <div class="rows">
+          <div class="row">
+            <div class="box" style="width: 100%;">
+              <table class="codeBoxSmall">
+                <thead>
+                  <th>51 - Data</th>
+                  <th>
+                    <div class="itemsRow">
+                      <span>52 - Hora Inicial</span>
+                      <span>53 - Hora Final</span>
+                    </div>
+                  </th>
+                  <th>54 - Tabela</th>
+                  <th>55 - Código do Procedimento</th>
+                  <th>56 - Descrição</th>
+                  <th>57 - Qtde.</th>
+                  <th>58 - Via</th>
+                  <th>59 - Tec. </th>
+                  <th>60 - % Red./ Acresc.</th>
+                  <th>61 - Valor Unitário - R$</th>
+                  <th>62 - Valor Total - R$</th>
+                </thead>
+                <tbody>
+                  <% for (var i = 0; i < accomplished_procedures.length; i++) { %>
+                    <tr>
+                      <td>
+                        <div class="itemsRow">
+                          <span style="width: 15px;"><%= i + 1 %>-</span>
+                          <div class="codeRow">
+                            <span class="codeBox"></span>
+                            <span class="codeBox"></span>
+                            <div class="divider--bar"></div>
+                            <span class="codeBox"></span>
+                            <span class="codeBox"></span>
+                            <div class="divider--bar"></div>
+                            <span class="codeBox"></span>
+                            <span class="codeBox"></span>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="codeRow">
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <div class="divider--dots"></div>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span>a</span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <div class="divider--dots"></div>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="codeRow">
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="codeRow">
+                          <span class="codeBox"><%= accomplished_procedures[i].code[0] %></span>
+                          <span class="codeBox"><%= accomplished_procedures[i].code[1] %></span>
+                          <span class="codeBox"><%= accomplished_procedures[i].code[2] %></span>
+                          <span class="codeBox"><%= accomplished_procedures[i].code[3] %></span>
+                          <span class="codeBox"><%= accomplished_procedures[i].code[4] %></span>
+                          <span class="codeBox"><%= accomplished_procedures[i].code[5] %></span>
+                          <span class="codeBox"><%= accomplished_procedures[i].code[6] %></span>
+                          <span class="codeBox"><%= accomplished_procedures[i].code[7] %></span>
+                          <span class="codeBox"><%= accomplished_procedures[i].code[8] %></span>
+                          <span class="codeBox"><%= accomplished_procedures[i].code[9] %></span>
+                        </div>
+                      </td>
+                      <td><span class="underline" style="width: 150px;"><%= accomplished_procedures[i].description %></span></td>
+                      <td>
+                        <div class="codeRow">
+                          <span class="codeBox"><%= procedures_accomplished_quantity[i].split('')[0] %></span>
+                          <span class="codeBox"><%= procedures_accomplished_quantity[i].split('')[1] %></span>
+                        </div>
+                      </td>
+                      <td>
+                        <span class="codeBox"></span>
+                      </td>
+                      <td>
+                        <span class="codeBox"></span>
+                      </td>
+                      <td>
+                        <div class="codeRow">
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <div class="divider--comma"></div>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="codeRow">
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <div class="divider--comma"></div>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="codeRow">
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <div class="divider--comma"></div>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                        </div>
+                      </td>
+                    </tr>
+                  <% } %>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="row">
+            <div class="box--gray" style="width: 100%;">
+              <p class="box__title">63- Data e Assinatura de Procedimentos em Série</p>
+              <div class="box__content" style="width: 100%;">
+                <div class="itemsFlex">
+                  <div class="codeRow">
+                    <span>1-</span>
+                    <span class="codeBox"></span>
+                    <span class="codeBox"></span>
+                    <div class="divider--bar"></div>
+                    <span class="codeBox"></span>
+                    <span class="codeBox"></span>
+                    <div class="divider--bar"></div>
+                    <span class="codeBox"></span>
+                    <span class="codeBox"></span>
+                    <span class="underline" style="width: 50px;"></span>
+                  </div>
+                  <div class="codeRow">
+                    <span>2-</span>
+                    <span class="codeBox"></span>
+                    <span class="codeBox"></span>
+                    <div class="divider--bar"></div>
+                    <span class="codeBox"></span>
+                    <span class="codeBox"></span>
+                    <div class="divider--bar"></div>
+                    <span class="codeBox"></span>
+                    <span class="codeBox"></span>
+                    <span class="underline" style="width: 50px;"></span>
+                  </div>
+                  <div class="codeRow">
+                    <span>3-</span>
+                    <span class="codeBox"></span>
+                    <span class="codeBox"></span>
+                    <div class="divider--bar"></div>
+                    <span class="codeBox"></span>
+                    <span class="codeBox"></span>
+                    <div class="divider--bar"></div>
+                    <span class="codeBox"></span>
+                    <span class="codeBox"></span>
+                    <span class="underline" style="width: 50px;"></span>
+                  </div>
+                  <div class="codeRow">
+                    <span>4-</span>
+                    <span class="codeBox"></span>
+                    <span class="codeBox"></span>
+                    <div class="divider--bar"></div>
+                    <span class="codeBox"></span>
+                    <span class="codeBox"></span>
+                    <div class="divider--bar"></div>
+                    <span class="codeBox"></span>
+                    <span class="codeBox"></span>
+                    <span class="underline" style="width: 50px;"></span>
+                  </div>
+                  <div class="codeRow">
+                    <span>5-</span>
+                    <span class="codeBox"></span>
+                    <span class="codeBox"></span>
+                    <div class="divider--bar"></div>
+                    <span class="codeBox"></span>
+                    <span class="codeBox"></span>
+                    <div class="divider--bar"></div>
+                    <span class="codeBox"></span>
+                    <span class="codeBox"></span>
+                    <span class="underline" style="width: 50px;"></span>
+                  </div>
+                  <div class="codeRow">
+                    <span>6-</span>
+                    <span class="codeBox"></span>
+                    <span class="codeBox"></span>
+                    <div class="divider--bar"></div>
+                    <span class="codeBox"></span>
+                    <span class="codeBox"></span>
+                    <div class="divider--bar"></div>
+                    <span class="codeBox"></span>
+                    <span class="codeBox"></span>
+                    <span class="underline" style="width: 50px;"></span>
+                  </div>
+                  <div class="codeRow">
+                    <span>7-</span>
+                    <span class="codeBox"></span>
+                    <span class="codeBox"></span>
+                    <div class="divider--bar"></div>
+                    <span class="codeBox"></span>
+                    <span class="codeBox"></span>
+                    <div class="divider--bar"></div>
+                    <span class="codeBox"></span>
+                    <span class="codeBox"></span>
+                    <span class="underline" style="width: 50px;"></span>
+                  </div>
+                  <div class="codeRow">
+                    <span>8-</span>
+                    <span class="codeBox"></span>
+                    <span class="codeBox"></span>
+                    <div class="divider--bar"></div>
+                    <span class="codeBox"></span>
+                    <span class="codeBox"></span>
+                    <div class="divider--bar"></div>
+                    <span class="codeBox"></span>
+                    <span class="codeBox"></span>
+                    <span class="underline" style="width: 50px;"></span>
+                  </div>
+                  <div class="codeRow">
+                    <span>9-</span>
+                    <span class="codeBox"></span>
+                    <span class="codeBox"></span>
+                    <div class="divider--bar"></div>
+                    <span class="codeBox"></span>
+                    <span class="codeBox"></span>
+                    <div class="divider--bar"></div>
+                    <span class="codeBox"></span>
+                    <span class="codeBox"></span>
+                    <span class="underline" style="width: 50px;"></span>
+                  </div>
+                  <div class="codeRow">
+                    <span>10-</span>
+                    <span class="codeBox"></span>
+                    <span class="codeBox"></span>
+                    <div class="divider--bar"></div>
+                    <span class="codeBox"></span>
+                    <span class="codeBox"></span>
+                    <div class="divider--bar"></div>
+                    <span class="codeBox"></span>
+                    <span class="codeBox"></span>
+                    <span class="underline" style="width: 50px;"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="box--gray" style="width: 100%;">
+              <p class="box__title">64- Observação</p>
+              <div class="rows">
+                <span class="underline" style="width: 100%;"></span>
+                <span class="underline" style="width: 100%;"></span>
+              </div>
+            </div>
+          </div>
+          <div class="row codeBoxSmall">
+            <div class="box--gray--auto">
+              <p class="box__title">65- Total Procedimentos R$</p>
+              <div class="box__content">
+                <div class="codeRow">
+                  <span class="codeBox"></span>
+                  <span class="codeBox"></span>
+                  <span class="codeBox"></span>
+                  <span class="codeBox"></span>
+                  <span class="codeBox"></span>
+                  <span class="codeBox"></span>
+                  <span class="codeBox"></span>
+                  <div class="divider--comma"></div>
+                  <span class="codeBox"></span>
+                  <span class="codeBox"></span>
+                </div>
+              </div>
+            </div>
+            <div class="box--gray--auto">
+              <p class="box__title">66- Total Taxas e Aluguéis R$</p>
+              <div class="box__content">
+                <div class="codeRow">
+                  <span class="codeBox"></span>
+                  <span class="codeBox"></span>
+                  <span class="codeBox"></span>
+                  <span class="codeBox"></span>
+                  <span class="codeBox"></span>
+                  <span class="codeBox"></span>
+                  <span class="codeBox"></span>
+                  <div class="divider--comma"></div>
+                  <span class="codeBox"></span>
+                  <span class="codeBox"></span>
+                </div>
+              </div>
+            </div>
+            <div class="box--gray--auto">
+              <p class="box__title">67- Total Materiais R$</p>
+              <div class="box__content">
+                <div class="codeRow">
+                  <span class="codeBox"></span>
+                  <span class="codeBox"></span>
+                  <span class="codeBox"></span>
+                  <span class="codeBox"></span>
+                  <span class="codeBox"></span>
+                  <span class="codeBox"></span>
+                  <span class="codeBox"></span>
+                  <div class="divider--comma"></div>
+                  <span class="codeBox"></span>
+                  <span class="codeBox"></span>
+                </div>
+              </div>
+            </div>
+            <div class="box--gray--auto">
+              <p class="box__title">68- Total Medicamentos R$</p>
+              <div class="box__content">
+                <div class="codeRow">
+                  <span class="codeBox"></span>
+                  <span class="codeBox"></span>
+                  <span class="codeBox"></span>
+                  <span class="codeBox"></span>
+                  <span class="codeBox"></span>
+                  <span class="codeBox"></span>
+                  <span class="codeBox"></span>
+                  <div class="divider--comma"></div>
+                  <span class="codeBox"></span>
+                  <span class="codeBox"></span>
+                </div>
+              </div>
+            </div>
+            <div class="box--gray--auto">
+              <p class="box__title">69- Total Diárias R$</p>
+              <div class="box__content">
+                <div class="codeRow">
+                  <span class="codeBox"></span>
+                  <span class="codeBox"></span>
+                  <span class="codeBox"></span>
+                  <span class="codeBox"></span>
+                  <span class="codeBox"></span>
+                  <span class="codeBox"></span>
+                  <span class="codeBox"></span>
+                  <div class="divider--comma"></div>
+                  <span class="codeBox"></span>
+                  <span class="codeBox"></span>
+                </div>
+              </div>
+            </div>
+            <div class="box--gray--auto">
+              <p class="box__title">70- Total Gases Medicinais R$</p>
+              <div class="box__content">
+                <div class="codeRow">
+                  <span class="codeBox"></span>
+                  <span class="codeBox"></span>
+                  <span class="codeBox"></span>
+                  <span class="codeBox"></span>
+                  <span class="codeBox"></span>
+                  <span class="codeBox"></span>
+                  <span class="codeBox"></span>
+                  <div class="divider--comma"></div>
+                  <span class="codeBox"></span>
+                  <span class="codeBox"></span>
+                </div>
+              </div>
+            </div>
+            <div class="box--gray--auto">
+              <p class="box__title">71- Total Geral da Guia R$</p>
+              <div class="box__content">
+                <div class="codeRow">
+                  <span class="codeBox"></span>
+                  <span class="codeBox"></span>
+                  <span class="codeBox"></span>
+                  <span class="codeBox"></span>
+                  <span class="codeBox"></span>
+                  <span class="codeBox"></span>
+                  <span class="codeBox"></span>
+                  <div class="divider--comma"></div>
+                  <span class="codeBox"></span>
+                  <span class="codeBox"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="box--gray">
+              <p class="box__title">86- Data e Assinatura do Solicitante</p>
+              <div class="box__content">
+                <div class="itemsRow">
+                  <div class="codeRow">
+                    <span class="codeBox"><%= todayDate.split('')[0] %></span>
+                    <span class="codeBox"><%= todayDate.split('')[1] %></span>
+                    <div class="divider--bar"></div>
+                    <span class="codeBox"><%= todayDate.split('')[2] %></span>
+                    <span class="codeBox"><%= todayDate.split('')[3] %></span>
+                    <div class="divider--bar"></div>
+                    <span class="codeBox"><%= todayDate.split('')[6] %></span>
+                    <span class="codeBox"><%= todayDate.split('')[7] %></span>
+                  </div>
+                  <img class="signature" src="<%= signature %>" alt="">
+                  <div class="rows">
+                    <span><%= professional_name %></span>
+                    <span><%= crm %></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box--gray">
+              <p class="box__title">87- Data e Assinatura do Responsável pela Autorização</p>
+              <div class="box__content">
+                <div class="itemsRow">
+                  <div class="codeRow">
+                    <span class="codeBox"></span>
+                    <span class="codeBox"></span>
+                    <div class="divider--bar"></div>
+                    <span class="codeBox"></span>
+                    <span class="codeBox"></span>
+                    <div class="divider--bar"></div>
+                    <span class="codeBox"></span>
+                    <span class="codeBox"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box--gray">
+              <p class="box__title">88- Data e Assinatura do Beneficiário ou Responsável</p>
+              <div class="box__content">
+                <div class="itemsRow">
+                  <div class="codeRow">
+                    <span class="codeBox"></span>
+                    <span class="codeBox"></span>
+                    <div class="divider--bar"></div>
+                    <span class="codeBox"></span>
+                    <span class="codeBox"></span>
+                    <div class="divider--bar"></div>
+                    <span class="codeBox"></span>
+                    <span class="codeBox"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box--gray">
+              <p class="box__title">89- Data e Assinatura do Prestador Executante</p>
+              <div class="box__content">
+                <div class="itemsRow">
+                  <div class="codeRow">
+                    <span class="codeBox"></span>
+                    <span class="codeBox"></span>
+                    <div class="divider--bar"></div>
+                    <span class="codeBox"></span>
+                    <span class="codeBox"></span>
+                    <div class="divider--bar"></div>
+                    <span class="codeBox"></span>
+                    <span class="codeBox"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- OPM Solicitados -->
+    <section>
+      <h2 class="section__title">OPM Solicitados</h2>
+      <div class="row">
+        <div class="box--gray" style="width: 100%;">
+          <table>
+            <thead>
+              <th>72 - Tabela</th>
+              <th>73 - Código do OPM</th>
+              <th>74 - Descrição OPM </th>
+              <th>75 - Qtde</th>
+              <th>76 - Fabricante</th>
+              <th>77 - Valor Unitário R$</th>
+            </thead>
+            <tbody>
+              <% for(var i = 0; i < materials.length; i++) { %>
+                <tr>
+                  <td>
+                    <div class="itemsRow">
+                      <span style="width: 15px;"><%= i + 1 %>-</span>
+                      <div class="codeRow">
+                        <span class="codeBox"></span>
+                        <span class="codeBox"></span>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="codeRow">
+                      <span class="codeBox"><%= materials[0].code[0] %></span>
+                      <span class="codeBox"><%= materials[0].code[1] %></span>
+                      <span class="codeBox"><%= materials[0].code[2] %></span>
+                      <span class="codeBox"><%= materials[0].code[3] %></span>
+                      <span class="codeBox"><%= materials[0].code[4] %></span>
+                      <span class="codeBox"><%= materials[0].code[5] %></span>
+                      <span class="codeBox"><%= materials[0].code[6] %></span>
+                      <span class="codeBox"><%= materials[0].code[7] %></span>
+                      <span class="codeBox"><%= materials[0].code[8] %></span>
+                      <span class="codeBox"><%= materials[0].code[9] %></span>
+                    </div>
+                  </td>
+                  <td>
+                    <span class="underline" style="width: 300px"><%= materials[i].description %></span>
+                  </td>
+                  <td>
+                    <div class="codeRow">
+                      <span class="codeBox"><%= material_details[i].quantity[0] || ' ' %></span>
+                      <span class="codeBox"><%= material_details[i].quantity[1] || ' ' %></span>
+                    </div>
+                  </td>
+                  <td><span class="underline" style="width: 160px;"><%= material_details[i].provider || ' ' %></span></td>
+                  <td>
+                    <div class="codeRow">
+                      <span class="codeBox"></span>
+                      <span class="codeBox"></span>
+                      <span class="codeBox"></span>
+                      <span class="codeBox"></span>
+                      <span class="codeBox"></span>
+                      <span class="codeBox"></span>
+                      <div class="divider--comma"></div>
+                      <span class="codeBox"></span>
+                      <span class="codeBox"></span>
+                    </div>
+                  </td>
+                </tr>
+              <% } %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+        <!-- OPM Utilizados -->
+        <section>
+          <h2 class="section__title">OPM Utilizados</h2>
+          <div class="rows">
+            <div class="row">
+              <div class="box--gray" style="width: 100%;">
+                <table>
+                  <thead>
+                    <th>78 - Tabela</th>
+                    <th>79 - Código do OPM</th>
+                    <th>80 - Descrição OPM </th>
+                    <th>81 - Qtde</th>
+                    <th>82 - Fabricante</th>
+                    <th>83 - Valor Unitário R$</th>
+                    <th>84 - Valor TotalR$</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="itemsRow">
+                          <span style="width: 15px;">1-</span>
+                          <div class="codeRow">
+                            <span class="codeBox"></span>
+                            <span class="codeBox"></span>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="codeRow">
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                        </div>
+                      </td>
+                      <td>
+                        <span class="underline" style="width: 100px"></span>
+                      </td>
+                      <td>
+                        <div class="codeRow">
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                        </div>
+                      </td>
+                      <td><span class="underline" style="width: 160px;"></span></td>
+                      <td>
+                        <div class="codeRow">
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <div class="divider--comma"></div>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="codeRow">
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <div class="divider--comma"></div>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="itemsRow">
+                          <span style="width: 15px;">2-</span>
+                          <div class="codeRow">
+                            <span class="codeBox"></span>
+                            <span class="codeBox"></span>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="codeRow">
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                        </div>
+                      </td>
+                      <td>
+                        <span class="underline" style="width: 100px"></span>
+                      </td>
+                      <td>
+                        <div class="codeRow">
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                        </div>
+                      </td>
+                      <td><span class="underline" style="width: 160px;"></span></td>
+                      <td>
+                        <div class="codeRow">
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <div class="divider--comma"></div>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="codeRow">
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <div class="divider--comma"></div>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="itemsRow">
+                          <span style="width: 15px;">3-</span>
+                          <div class="codeRow">
+                            <span class="codeBox"></span>
+                            <span class="codeBox"></span>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="codeRow">
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                        </div>
+                      </td>
+                      <td>
+                        <span class="underline" style="width: 100px"></span>
+                      </td>
+                      <td>
+                        <div class="codeRow">
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                        </div>
+                      </td>
+                      <td><span class="underline" style="width: 160px;"></span></td>
+                      <td>
+                        <div class="codeRow">
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <div class="divider--comma"></div>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="codeRow">
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <div class="divider--comma"></div>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="itemsRow">
+                          <span style="width: 15px;">4-</span>
+                          <div class="codeRow">
+                            <span class="codeBox"></span>
+                            <span class="codeBox"></span>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="codeRow">
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                        </div>
+                      </td>
+                      <td>
+                        <span class="underline" style="width: 100px"></span>
+                      </td>
+                      <td>
+                        <div class="codeRow">
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                        </div>
+                      </td>
+                      <td><span class="underline" style="width: 160px;"></span></td>
+                      <td>
+                        <div class="codeRow">
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <div class="divider--comma"></div>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="codeRow">
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <div class="divider--comma"></div>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="itemsRow">
+                          <span style="width: 15px;">5-</span>
+                          <div class="codeRow">
+                            <span class="codeBox"></span>
+                            <span class="codeBox"></span>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="codeRow">
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                        </div>
+                      </td>
+                      <td>
+                        <span class="underline" style="width: 100px"></span>
+                      </td>
+                      <td>
+                        <div class="codeRow">
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                        </div>
+                      </td>
+                      <td><span class="underline" style="width: 160px;"></span></td>
+                      <td>
+                        <div class="codeRow">
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <div class="divider--comma"></div>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="codeRow">
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <div class="divider--comma"></div>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="itemsRow">
+                          <span style="width: 15px;">6-</span>
+                          <div class="codeRow">
+                            <span class="codeBox"></span>
+                            <span class="codeBox"></span>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="codeRow">
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                        </div>
+                      </td>
+                      <td>
+                        <span class="underline" style="width: 100px"></span>
+                      </td>
+                      <td>
+                        <div class="codeRow">
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                        </div>
+                      </td>
+                      <td><span class="underline" style="width: 160px;"></span></td>
+                      <td>
+                        <div class="codeRow">
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <div class="divider--comma"></div>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="codeRow">
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <div class="divider--comma"></div>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="itemsRow">
+                          <span style="width: 15px;">7-</span>
+                          <div class="codeRow">
+                            <span class="codeBox"></span>
+                            <span class="codeBox"></span>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="codeRow">
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                        </div>
+                      </td>
+                      <td>
+                        <span class="underline" style="width: 100px"></span>
+                      </td>
+                      <td>
+                        <div class="codeRow">
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                        </div>
+                      </td>
+                      <td><span class="underline" style="width: 160px;"></span></td>
+                      <td>
+                        <div class="codeRow">
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <div class="divider--comma"></div>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="codeRow">
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <div class="divider--comma"></div>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="itemsRow">
+                          <span style="width: 15px;">8-</span>
+                          <div class="codeRow">
+                            <span class="codeBox"></span>
+                            <span class="codeBox"></span>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="codeRow">
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                        </div>
+                      </td>
+                      <td>
+                        <span class="underline" style="width: 100px"></span>
+                      </td>
+                      <td>
+                        <div class="codeRow">
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                        </div>
+                      </td>
+                      <td><span class="underline" style="width: 160px;"></span></td>
+                      <td>
+                        <div class="codeRow">
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <div class="divider--comma"></div>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="codeRow">
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <div class="divider--comma"></div>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="itemsRow">
+                          <span style="width: 15px;">9-</span>
+                          <div class="codeRow">
+                            <span class="codeBox"></span>
+                            <span class="codeBox"></span>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="codeRow">
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                        </div>
+                      </td>
+                      <td>
+                        <span class="underline" style="width: 100px"></span>
+                      </td>
+                      <td>
+                        <div class="codeRow">
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                        </div>
+                      </td>
+                      <td><span class="underline" style="width: 160px;"></span></td>
+                      <td>
+                        <div class="codeRow">
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <div class="divider--comma"></div>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="codeRow">
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                          <div class="divider--comma"></div>
+                          <span class="codeBox"></span>
+                          <span class="codeBox"></span>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="row justifyEnd">
+              <div class="box--gray">
+                <p class="box__title">85- Total OPM R$</p>
+                <div class="box__content">
+                  <div class="itemsRow">
+                    <div class="codeRow">
+                      <span class="codeBox"></span>
+                      <span class="codeBox"></span>
+                      <span class="codeBox"></span>
+                      <span class="codeBox"></span>
+                      <span class="codeBox"></span>
+                      <span class="codeBox"></span>
+                      <div class="divider--comma"></div>
+                      <span class="codeBox"></span>
+                      <span class="codeBox"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  </div>
+  <div style="height: 600px; width: 10px"></div>
+    <div style="margin-top: 10px; text-align: center">
+      <% if(rg_url !=='' ){ %>
+      <img style="max-height: 600px; max-width: 600px" src="<%= rg_url %>" />
+      <br />
+      <% } %>
+
+      <br />
+      <% if(wallet_plain !=='' ){ %>
+      <img
+        style="max-height: 600px; max-width: 600px"
+        src="<%= wallet_plain %>"
+      />
+      <br />
+      <% } %>
+
+      <br />
+
+      <% for (item of indicative_medical_report) { %>
+      <img style="max-height: 600px; max-width: 600px" src="<%= item %>" />
+      <br /><br />
+      <% } %>
+    </div>
+  </div>
+</body>
+</html>

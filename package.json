@@ -1,0 +1,17 @@
+{
+  "type": "module",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "puppeteer": "^22.6.0"
+  },
+  "name": "ejs_to_pdf",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
